@@ -9,6 +9,7 @@ A mock ticket purchasing system that enables to you to purchase movie tickets on
 
 ## Installation Requirements
 Git
+json-server
 
 ### Installation instruction
 ```
