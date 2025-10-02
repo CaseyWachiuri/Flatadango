@@ -5,6 +5,9 @@ const init = () => {
 document.addEventListener("DOMContentLoaded", init);
 
 // Declaring selected Elements to variable names
+const movieDisplayForms = document.querySelector("section#movie-details");
+movieDisplayForms.style.display = 'none';
+
 const movieList = document.querySelector("ul#films");
 
 const moviePoster = document.querySelector("img#poster");
@@ -30,7 +33,9 @@ function displayMovie() {
 }
 
 function getMovie(movie) {
+  movieDisplayForms.style.display = 'flex';
   const availableTickets = movie.capacity - movie.tickets_sold
+  
 
   moviePoster.src = movie.poster;
   moviePoster.alt = movie.title;
