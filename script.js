@@ -14,9 +14,9 @@ const movieRuntime = document.querySelector("p#runtime");
 const movieDescription = document.querySelector("p#description");
 const movieShowtime = document.querySelector("p#showtime");
 const movieTickets = document.querySelector("p#tickets");
+const ticketBtn = document.querySelector("button#buy-ticket");
 
 function displayMovie() {
-
   fetch("http://localhost:3000/films")
     .then(r => r.json())
     .then((data) => {
@@ -40,15 +40,10 @@ function getMovie(movie) {
   movieDescription.innerText = movie.description;
   movieShowtime.innerText = movie.showtime;
   movieTickets.innerText = `${availableTickets} tickets remaining`;
+  // Checking to see the data of the ticket button
+  console.log(ticketBtn);
+
 }
 
-/*
-"id": "1",
-"title": "The Giant Gila Monster",
-"runtime": "108",
-"capacity": 30,
-"showtime": "04:00PM",
-"tickets_sold": 27,
-"description": "A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.",
-"poster": "https://www.gstatic.com/tv/thumb/v22vodart/2157/p2157_v_v8_ab.jpg"
-*/
+function purchaseTicket(movie) {
+}
