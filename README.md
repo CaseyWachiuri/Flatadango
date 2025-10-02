@@ -8,7 +8,7 @@
 A mock ticket purchasing system that enables to you to purchase movie tickets online
 
 ## Installation Requirements
-Git
+Git,
 json-server
 
 ### Installation instruction
@@ -17,8 +17,8 @@ git clone https://github.com/CaseyWachiuri/Flatadango.git
 
 ```
 ## Technologies used
-HTML
-CSS
+HTML,
+CSS,
 Javascript
 
 ## Support and contact details
