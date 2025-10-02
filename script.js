@@ -36,7 +36,6 @@ function getMovie(movie) {
   movieDisplayForms.style.display = 'flex';
   const availableTickets = movie.capacity - movie.tickets_sold
   
-
   moviePoster.src = movie.poster;
   moviePoster.alt = movie.title;
 
@@ -46,9 +45,14 @@ function getMovie(movie) {
   movieShowtime.innerText = movie.showtime;
   movieTickets.innerText = `${availableTickets} tickets remaining`;
   // Checking to see the data of the ticket button
-  console.log(ticketBtn);
-
+  ticketBtn.addEventListener("click", () => purchaseTicket(movie, availableTickets));
 }
 
 function purchaseTicket(movie) {
+  if (tickets > 0) {
+    // Add Patch Functionality to update db.json
+  }else{
+    ticketBtn.disabled = true;
+    ticketBtn.textContent = "sold out";
+  }
 }
